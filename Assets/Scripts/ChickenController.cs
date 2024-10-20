@@ -22,7 +22,7 @@ public class ChickenController : MonoBehaviour
             float tempoGeracao = Random.Range(tempoMin, tempoMax);
             yield return new WaitForSeconds(tempoGeracao);
 
-            Instantiate(ovoPrefab, transform.position, Quaternion.identity);
+            Instantiate(ovoPrefab, transform.position, Quaternion.Euler(-90, 0, 0));
 
             // Verifica se deve ajustar a velocidade de geração dos ovos.
             AjustarTempoGeracao();
